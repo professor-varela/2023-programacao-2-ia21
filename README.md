@@ -1,7 +1,5 @@
 # 2023-programacao-2-ia21
 
-...
-
 ## Passo 1
 Settings / Developer settings / Tokens (classic) / Generate New Token
 
