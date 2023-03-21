@@ -10,8 +10,11 @@ router.get("/", async (req, res) => {
   res.json(result)
 })
 
-router.get("/:id", (req, res) => {
-  res.send("# Buscar dados de uma tarefa")
+router.get("/:id", async (req, res) => {
+  console.log("READED ITEN")
+  const db = await database()
+  const result = await db.all('SELECT * FROM todo WHERE id=?', [req.params.id])
+  res.json(result)
 })
 
 router.post("/", async (req, res) => {
