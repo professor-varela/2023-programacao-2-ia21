@@ -33,8 +33,4 @@ router.delete("/:id", (req, res) => {
   res.send("# Excluir uma tarefa")
 })
 
-router.get("/", (req, res) => {
-  res.send("Hello world")
-})
-
 export default router
