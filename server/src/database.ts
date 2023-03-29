@@ -1,13 +1,13 @@
 import sqlite3 from 'sqlite3'
-import { Database, open } from 'sqlite'
+import sqlite from 'sqlite'
 
-let _db: Database<any> | null = null
+let _db: sqlite.Database<any> | null = null
 
 export default async function() {
   if (_db) 
-    return _db as Database<any> 
+    return _db as sqlite.Database<any> 
 
-  const db = await open({
+  const db = await sqlite.open({
     filename: './database.sqlite',
     driver: sqlite3.Database
   })
